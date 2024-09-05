@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Data Visualization</title>
+    <!-- Include necessary CSS if needed -->
+</head>
+<body>
+    <h1>Head of DataFrame</h1>
+    {{ head_html|safe }}
+
+    <h2>Column Names</h2>
+    <ul>
+        {% for column in columns %}
+            <li>{{ column }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Select a Column to Visualize:</h2>
+    <form action="/visualize" method="post">
+        <select name="column_name">
+            {% for column in columns %}
+                <option value="{{ column }}">{{ column }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Visualize">
+    </form>
+</body>
+</html>

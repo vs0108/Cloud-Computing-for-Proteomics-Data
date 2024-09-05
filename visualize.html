@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization for Data.Protein</title>
+    <!-- Include necessary CSS if needed -->
+    <style>
+        .visualization-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .visualization {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visualization for Protein Data</h1>
+
+    <p>This visualization showcases data related to protein content in various food categories. Protein is an essential macronutrient that plays a crucial role in the growth, repair, and maintenance of body tissues. It is composed of amino acids and is found in both animal and plant-based foods.</p>
+
+    
+
+    <div class="visualization-container">
+        <div class="visualization">
+            <h2>Bar Chart: Protein Content by Category</h2>
+            {{ bar_div|safe }}
+        </div>
+
+        <div class="visualization">
+            <h2>Pie Chart: Distribution of Protein Content</h2>
+            {{ pie_div|safe }}
+        </div>
+    </div>
+
+    <div class="visualization-container">
+        <div class="visualization">
+            <h2>Box Plot: Protein Distribution</h2>
+            {{ box_div|safe }}
+        </div>
+
+        <div class="visualization">
+            <h2>Scatter Plot: Protein vs. Fat</h2>
+            {{ scatter_div|safe }}
+        </div>
+    </div>
+</body>
+</html>
